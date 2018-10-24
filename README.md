@@ -30,5 +30,5 @@ To use this API, please set up the enviroment as follow:
 
 ## Training method
 Two method are used to train the model:
-   Method1:https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku
-   Method2:https://github.com/ethanhou99/ml_learn/blob/master/model2.ipynb (also in the main folder model2.ipynb)
+   - Method1:https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku
+   - Method2:https://github.com/ethanhou99/ml_learn/blob/master/model2.ipynb (also in the main folder model2.ipynb)
