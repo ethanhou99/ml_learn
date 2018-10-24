@@ -26,10 +26,21 @@ To use this API, please set up the enviroment as follow:
 3. Both of these two methods are shown as below:
 <img src="https://github.com/ethanhou99/ml_learn/blob/master/images/tagging%20example.png" />
 <img src="https://github.com/ethanhou99/ml_learn/blob/master/images/tagging%20exampleII.png" />
-4. About 500 images are trained by both method.
+4. About 500 images are tagged to train the models.
 
 ## Training method
 Two method are used to train the model:
    - Method1:https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku
    - Method2:https://github.com/ethanhou99/ml_learn/blob/master/model2.ipynb (also in the main folder model2.ipynb)
    - Again, model1 can be dowloaded from https://drive.google.com/file/d/1U3SxjOcr4FsYsG2gd9nVJHsJ-w4sJR18/view and model2 is in the main folder directly called model2.h5
+
+## Comparision
+The traing method is SSD, thus I'll compare SSD with another project's method - Unet
+- SSD is the first deep network based object detector that does not resample pixels or features for bounding box hypotheses and is as accurate as approaches that do. 
+- Unet network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks.
+
+## Some fun reference:
+- SSD: https://arxiv.org/pdf/1512.02325v5.pdf
+- Unet: https://arxiv.org/pdf/1505.04597.pdf
+--
+
