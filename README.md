@@ -37,16 +37,16 @@ Two method are used to train the model:
 ## Comparision
 The traing method is SSD, thus I'll compare SSD with another project's method - Unet
 
-**SSD**
-SSD is the first deep network based object detector that does not resample pixels or features for bounding box hypotheses and is as accurate as approaches that do. 
+###**SSD**
+-SSD is the first deep network based object detector that does not resample pixels or features for bounding box hypotheses and is as accurate as approaches that do. 
 - Advantages
 1. Features are pooled from different scales of the feature maps, and as a result the overall algorithm can detect objects at different scales and of different sizes and is more accurate than faster-RCNN;
 2. As all the predictions are made in a single pass, the SSD is significantly faster than faster-RCNN.
 - Disadvantages
 1. Information flows unidirectional and the classifier network cannot utilize other directional information;
 2. Too slow for real-time applications.
-**Unet**
-Unet network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks.
+###**Unet**
+-Unet network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks.
 - Advantages
 1. Unet is really versatile and can be used for any reasonable image masking task;
 2. High accuracy given proper training, adequate dataset and training time;
