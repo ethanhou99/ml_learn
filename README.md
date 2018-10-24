@@ -19,3 +19,16 @@ To use this API, please set up the enviroment as follow:
    and main.py, SSD300.hdf5(model)
 6. Run the mian.py
 7. The recognize result are saved in the output_images folder
+
+## Tagging method
+1. The tagging method is from https://www.neurala.com/
+2. Another tagging method is using labelImage.
+3. Both of these two methods are shown as below:
+<img src="https://github.com/ethanhou99/ml_learn/blob/master/images/tagging%20example.png" />
+<img src="https://github.com/ethanhou99/ml_learn/blob/master/images/tagging%20exampleII.png" />
+4. About 500 images are trained by both method.
+
+## Training method
+Two method are used to train the model:
+   Method1:https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku
+   Method2:https://github.com/ethanhou99/ml_learn/blob/master/model2.ipynb (also in the main folder model2.ipynb)
