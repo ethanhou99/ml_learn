@@ -36,11 +36,40 @@ Two method are used to train the model:
 
 ## Comparision
 The traing method is SSD, thus I'll compare SSD with another project's method - Unet
-- SSD is the first deep network based object detector that does not resample pixels or features for bounding box hypotheses and is as accurate as approaches that do. 
-- Unet network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks.
+
+**SSD**
+SSD is the first deep network based object detector that does not resample pixels or features for bounding box hypotheses and is as accurate as approaches that do. 
+- Advantages
+1. Features are pooled from different scales of the feature maps, and as a result the overall algorithm can detect objects at different scales and of different sizes and is more accurate than faster-RCNN;
+2. As all the predictions are made in a single pass, the SSD is significantly faster than faster-RCNN.
+- Disadvantages
+1. Information flows unidirectional and the classifier network cannot utilize other directional information;
+2. Too slow for real-time applications.
+**Unet**
+Unet network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks.
+- Advantages
+1. Unet is really versatile and can be used for any reasonable image masking task;
+2. High accuracy given proper training, adequate dataset and training time;
+3. This architecture is input image size agnostic since it does not contain fully connected layers (!);
+4. This also leads to smaller model weight size (for 512x512 U-NET - ca. 89mb);
+5. Can be easily scaled to have multiple classes;
+6. Code samples are abundant (though none of them worked for me from the box, given that the majority was for keras >1.2. 7. 7. Even keras 2.0 required some layer cropping to launch properly);
+8. Pure tensorflow black-box implementation also exists (did not try it);
+9. Relatively easy to understand why the architecture works, if you have basic understanding of how convolutions work.
+- Disadvantages
+1. Because of many layers takes significant amount of time to train;
+2. Relatively high GPU memory footprint for larger images:
+3. 640x959 image => you can fit 4-8 images in one batch with 6GB GPU;
+4. 640x959 image => you can fit 8-16 images in one batch with 12GB GPU;
+5. 1280*1918 => you can fit 1-2 images in one batch with 12GB GPU;
+6. Is less covered in blogs / tutorials than more conventional architectures;
+7. The majority of Keras implementations are for outdated Keras versions;
+8. Is not standard to have pre-trained models widely available (it's too task specific).
 
 ## Some fun reference:
-- SSD: https://arxiv.org/pdf/1512.02325v5.pdf
-- Unet: https://arxiv.org/pdf/1505.04597.pdf
---
-
+- SSD paper: https://arxiv.org/pdf/1512.02325v5.pdf
+- SSD github: https://github.com/weiliu89/caffe/tree/ssd
+- SSD training: https://www.kdnuggets.com/2017/11/understanding-deep-convolutional-neural-networks-tensorflow-keras.html/2
+- Unet paper: https://arxiv.org/pdf/1505.04597.pdf
+- Unet page: https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/
+- Unet introduction: https://spark-in.me/post/unet-adventures-part-one-getting-acquainted-with-unet
