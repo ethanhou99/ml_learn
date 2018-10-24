@@ -32,3 +32,4 @@ To use this API, please set up the enviroment as follow:
 Two method are used to train the model:
    - Method1:https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku
    - Method2:https://github.com/ethanhou99/ml_learn/blob/master/model2.ipynb (also in the main folder model2.ipynb)
+   - Again, model1 can be dowloaded from https://drive.google.com/file/d/1U3SxjOcr4FsYsG2gd9nVJHsJ-w4sJR18/view and model2 is in the main folder directly called model2.h5
